@@ -2,12 +2,12 @@
 
 Simple Dropdown component for React
 
-###Scope
+### Scope
 - search input
 - drop down an up, depending on position
 - mobile friendly, uses native select element
 
-###Usage
+### Usage
 ```JavaScript
 <Dropdown options={options} onChange={::this.onChange}/>
 ```
