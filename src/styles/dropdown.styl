@@ -1,0 +1,130 @@
+.dropdown
+	border-radius 4px
+	border solid 1px #ccc
+	display: inline-block
+	position: relative
+	min-width 300px
+	text-align left
+
+	& *
+		font-family "Open Sans", sans-serif
+
+	&:after
+		content: ''
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #ccc;
+		position: absolute
+		right: 0
+		margin: 0 10px
+		top: 50%
+		margin-top: -2px
+
+	&_opened
+		border-bottom-left-radius 0
+		border-bottom-right-radius 0
+
+		.dropdown__list
+			display: block
+
+	&_up {
+		border-top-left-radius 0
+		border-top-right-radius 0
+		border-bottom-left-radius 4px
+		border-bottom-right-radius 4px
+
+		.dropdown__placeholder {
+			display: none
+		}
+
+		.dropdown__list {
+			bottom: 100%
+			top: initial
+			border-top-left-radius 4px
+			border-top-right-radius 4px
+			border-bottom-left-radius 0px
+			border-bottom-right-radius 0px
+		}
+	}
+
+	&__select
+		outline none
+		padding 10px
+		border: none
+		border-radius 4px
+		-webkit-appearance: none;
+		appearance: none;
+		font-size 15px
+		background-color white
+		width: 100%
+
+	&__input
+		outline none
+		padding: 15px 10px
+		border: none
+		font-size 15px
+		border-radius 4px
+		width: 100%
+		padding-right: 30px
+		transition all 0.1s ease-in-out
+
+	&__placeholder
+		position: absolute
+		padding: 0 10px
+		height 100%
+		left -5px
+		display: flex
+		align-items: center
+		color: #bbb
+		transition all 0.1s ease-in-out
+		font-size 12px
+		top: -52%
+
+		label
+			background-color white
+			padding: 0 5px
+			cursor: pointer
+			user-select none
+
+	&__placeholder_empty
+		font-size 15px
+		top 0px
+
+	/* List */
+	&__list
+		position: absolute
+		left 0
+		right: 0
+		top 100%
+		border solid 1px #ccc
+		background-color white
+		margin-left -1px
+		margin-right: -1px
+		border-bottom-left-radius 4px
+		border-bottom-right-radius 4px
+		display: none
+
+	&__list_up
+		bottom: 100%
+		top: initial
+
+	&__list_empty
+		padding: 10px
+		text-align left
+
+	/* List item */
+	&__list-item
+		padding: 10px
+		cursor: pointer
+		border-radius 4px
+		text-align left
+
+		&:hover
+			background-color #fcfcfc
+
+	&__list-item_search
+		color: #ff6600
+		text-decoration underline
+		text-transform capitalize
