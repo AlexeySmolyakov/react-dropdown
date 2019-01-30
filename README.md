@@ -9,5 +9,5 @@ Simple Dropdown component for React
 
 ### Usage
 ```JavaScript
-<Dropdown options={options} onChange={::this.onChange}/>
+<Dropdown options={options} onChange={this.onChange}/>
 ```
